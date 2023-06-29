@@ -1,0 +1,31 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+    <p class="text-left ">Інструкцію по використанню додатку можна почитати <a href="index.html#instructionApp">тут</a>
+    </p>
+</div>
+<div class="container mt-4">
+    <div class="row row-cols-1 row-cols-xl-4 row-cols-lg-3 row-cols-md-2" id="wordsForLearning">
+        {% for item in words %}
+            <div class="col mb-4">
+                <div class="card border-primary mb-3  block-opacity">
+                    <div class="card-header">Header</div>
+                    <div class="card-body text-center text-primary p-0">
+                        <p class="card-text pb-4 card-text-language">{{item.english_word|upper}}<!--${englishWords[i]}--></p>
+                        <p class="card-text card-text-metalanguage">{{item.translation|upper}}<!--${UAWords[i]}--></p>
+                    </div>
+                    <div class="card-footer text-center">
+                        <button type="button" class="btn btn-primary" id="learningWord${i}">Вивчаю!</button>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+{% endblock %}
+

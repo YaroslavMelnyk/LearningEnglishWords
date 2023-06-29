@@ -1,0 +1,27 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block layout %}
+<header class="container pt-2 px-0 mb-5">
+    <div class="mt-5">
+        <img class="img-header" src="{% static 'main/img/header.jpg' %}">
+    </div>
+</header>
+
+<main>
+    {% block content %}
+    {% endblock %}
+</main>
+
+<footer class="bg-primary p-3">
+    <p class="text-center">Learning English Words Corporation</p>
+    <p class="text-center"> Електронна пошта:<br> learningenglishwords@lew.com.ua</p>
+    <p class="text-center">
+        Телефони:<br>
+        +38(000)000-00-00<br>
+        +38(111)111-11-11<br>
+        +38(222)222-22-22
+    </p>
+    <p class="text-center mb-0">Всі права захищені.</p>
+</footer>
+{% endblock %}

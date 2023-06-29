@@ -1,0 +1,14 @@
+{% load static %}
+
+<div class="col mb-4">
+    <div class="card border-primary mb-3  block-opacity">
+        <div class="card-header">Header</div>
+        <div class="card-body text-center text-primary p-0">
+            <p class="card-text pb-4 card-text-language">{{englishWords}}<!--${englishWords[i]}--></p>
+            <p class="card-text card-text-metalanguage">{{UAWords}}<!--${UAWords[i]}--></p>
+        </div>
+        <div class="card-footer text-center">
+            <button type="button" class="btn btn-primary" id="learningWord${i}">Вивчаю!</button>
+        </div>
+    </div>
+</div>

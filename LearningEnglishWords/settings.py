@@ -25,7 +25,10 @@ SECRET_KEY = 'django-insecure-c2ye@=t*v2watf6zah4!k@futw#ez6x9ga3e30%pa_v+)%!zm^
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['*']
+
+LOGIN_REDIRECT_URL = 'home'
+LOGOUT_REDIRECT_URL = 'home'
 
 
 # Application definition
@@ -38,7 +41,10 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'contact'
+    'main',
+    'users',
+    #'contact',
+    #'profiles'  ## можливо перейменувати(перестворити) застосунок на users
 ]
 
 MIDDLEWARE = [
@@ -118,6 +124,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
 
 STATIC_URL = 'static/'
+
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/4.1/ref/settings/#default-auto-field
